@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">   <!-- CSSファイル読み込み -->
+        <title>JavaScript勉強用</title>             <!-- ブラウザタグ名 -->
+    </head>
+
+    <body>
+        <p class="title">画像処理システム</p>
+        <div class="content">
+            <div class="header">入力画像</div>
+            <div class="header">出力画像</div>
+            <div class="input_image" id="drag-and-drop-area">
+                <input type="file" class="hidden" accept="image/*" id="file-select-input">
+                <img id="src-image" style="width: 400px;"/>
+                <img id="hidden-image" style="display: none;" />
+            </div>
+            <div class="image">
+                <canvas id="output-canvas"></canvas>
+                <canvas id="hidden-canvas" style="display: none;"></canvas>
+            </div>
+
+            <div class="button">
+                <a href="#" input type="button" id="gray-scale-btn">グレースケール化</a>
+                <a href="#" input type="button" id="linedraw-btn">線画化</a>
+                <a href="#" input type="button" id="expansion-btn">膨張処理</a>
+            </div>
+
+            <div class="button">
+                <a href="#" id="download-btn" download="converted.png">ダウンロード</a> <!-- ダウンロードボタン -->
+            </div>
+        </div>
+        <script src="index.js" type="text/javascript"></script>     <!-- JSファイル読み込み -->
+        <script src="../opencv.js" type="text/javascript"></script> <!-- JSファイル読み込み -->
+    </body>
+</html>
