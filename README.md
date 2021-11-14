@@ -8,7 +8,6 @@ HTML，CSS，JavaScriptを学ぶ勉強会のために作成されたプログラ
 3. ダウンロードしたopencv.jsを「JS_studyフォルダ直下」に設置
 <br>
 
----
 **第1回：opencv.jsを用いた簡単な画像処理システム**
 <br>
 opencv.jsを用いて入力画像に対して画像処理を加える簡単なシステム作成
