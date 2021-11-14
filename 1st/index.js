@@ -1,41 +1,54 @@
 //定義
-const srcImg = document.getElementById('src-image');
-const hiddenImg = document.getElementById('hidden-image');
-const fileInput = document.getElementById('file-select-input');
-const canvas = document.getElementById('output-canvas');
-const hiddenCanvas = document.getElementById('hidden-canvas');
-const grayScaleBtn = document.getElementById('gray-scale-btn');
-const lineDrawBtn = document.getElementById('linedraw-btn');
-const expansionBtn = document.getElementById('expansion-btn');
-const downloadBtn = document.getElementById('download-btn');
-const dragAndDropArea = document.getElementById('drag-and-drop-area');
-const pushBtn = document.querySelectorAll('#drag-and-drop-area');
+/*
+document.getElementById('id')
+HTMLファイル内で使われるidを取得して処理をしたい場合に使用
+*/
+const srcImg = document.getElementById('src-image');                    //入力画像
+const hiddenImg = document.getElementById('hidden-image');              //入力画像の代替
+const fileInput = document.getElementById('file-select-input');         //ファイル選択
+const canvas = document.getElementById('output-canvas');                //表示画像
+const hiddenCanvas = document.getElementById('hidden-canvas');          //隠しキャンバス
+const grayScaleBtn = document.getElementById('gray-scale-btn');         //グレースケール化ボタン
+const lineDrawBtn = document.getElementById('linedraw-btn');            //線画化ボタン
+const expansionBtn = document.getElementById('expansion-btn');          //膨張処理ボタン
+const downloadBtn = document.getElementById('download-btn');            //ダウンロードボタン
+const dragAndDropArea = document.getElementById('drag-and-drop-area');  //ドラッグ＆ドロップエリア
+const pushBtn = document.querySelectorAll('#drag-and-drop-area');       //ドラッグ＆ドロップエリア
 
 // ファイル選択ボタン
+//ドラッグ＆ドロップエリアでマウスクリックが行われた場合ファイル選択処理を行う
 pushBtn.forEach((ele) => {
     ele.addEventListener('click', () => {
-        fileInput.click();      //[fileInput]が押された場合の処理へ移動
+        //[fileInput]が押された場合の処理へ（ファイル選択処理へ）
+        fileInput.click();
     });
 });
 
-// ドラッグ中
+/*
+e.preventDefault();　　デフォルト動作をキャンセル
+ブラウザは「ドロップ操作」をすると画像を表示する機能がデフォルトで存在
+ドラッグ&ドロップで画像を読み込む時に、この機能が邪魔をするのでここでキャンセルする
+
+datatransferはドラッグしている要素のデータを保持するために使用
+*/
+
+// ドラッグ＆ドロップ領域にドラッグしている要素がある場合
 dragAndDropArea.addEventListener('dragover', (e) => {
-    dragAndDropArea.classList.add('active');
-    e.preventDefault();
-    e.dataTransfer.dropEffect = 'copy';
+    dragAndDropArea.classList.add('active');    //「active」クラスを追加
+    e.preventDefault();                         //デフォルト動作をキャンセル
+    e.dataTransfer.dropEffect = 'copy';         //ドロップ領域に入力画像をコピー
 });
 
-// マウスがドラッグ＆ドロップ領域外に出たとき
+// ドラッグしている要素がドラッグ＆ドロップ領域外に出たとき
 dragAndDropArea.addEventListener('dragleave', (e) => {
-    dragAndDropArea.classList.remove('active');
+    dragAndDropArea.classList.remove('active'); //「active」クラスを除去
 });
 
-
-// ドロップ時
+// ドラッグ＆ドロップ領域に画像ファイルをドロップされたとき
 dragAndDropArea.addEventListener('drop', (e) => {
-    e.preventDefault();
-    dragAndDropArea.classList.add('active');
-    const files = e.dataTransfer.files;
+    e.preventDefault();                         //デフォルト動作をキャンセル
+    dragAndDropArea.classList.add('active');    //「active」クラスを追加
+    const files = e.dataTransfer.files;         //ファイル情報を取得
 
     //何も読み込まれていない場合
     if (files.length === 0) {
@@ -47,14 +60,14 @@ dragAndDropArea.addEventListener('drop', (e) => {
         return;
     }
 
-    srcImg.src = URL.createObjectURL(files[0]);
-    hiddenImg.src = URL.createObjectURL(files[0]);
+    srcImg.src = URL.createObjectURL(files[0]);     //ファイル情報から画像を読み込む(src属性に代入)
+    hiddenImg.src = URL.createObjectURL(files[0]);  //ファイル情報から画像を読み込む(src属性に代入)
 });
 
 
 // 画像をグレースケールに変換する
 function convertImageToGray(img) {
-    let dst = new cv.Mat();
+    let dst = new cv.Mat();     //JSの場合，画像を変換するならば空の画像を用意する必要がある
     cv.cvtColor(img, dst, cv.COLOR_RGBA2GRAY, 0);
     return dst;
 }
@@ -63,6 +76,7 @@ function convertImageToGray(img) {
 function convertImageToLineDrawing(img) {
     const kernel = cv.getStructuringElement(cv.MORPH_RECT, new cv.Size(5, 5));
 
+    // グレースケール画像でないと線画変換が出来ない仕様なので...
     const imgGray = new cv.Mat();
     cv.cvtColor(img, imgGray, cv.COLOR_RGBA2GRAY);
 
@@ -88,13 +102,13 @@ function expansion(img) {
     return imgDilated;
 }
 
-//[fileInput]が押された場合の処理
+//[fileInput]が押された場合の処理（画像入力の処理）
 fileInput.addEventListener('change', e => {
     srcImg.src = URL.createObjectURL(e.target.files[0]);
     hiddenImg.src = URL.createObjectURL(e.target.files[0]);
 }, false);
 
-//「grayScaleBtn」が押された場合の処理
+//「grayScaleBtn」が押された場合の処理（グレースケール化の処理）
 grayScaleBtn.addEventListener('click', e => {
     let src = cv.imread(srcImg);
     const dst = convertImageToGray(src);
@@ -109,7 +123,7 @@ grayScaleBtn.addEventListener('click', e => {
     hiddenDst.delete();
 });
 
-//「lineDrawBtn」が押された場合の処理
+//「lineDrawBtn」が押された場合の処理（線画化の処理）
 lineDrawBtn.addEventListener('click', e => {
     const src = cv.imread(srcImg);
     const dst = convertImageToLineDrawing(src);
@@ -124,7 +138,7 @@ lineDrawBtn.addEventListener('click', e => {
     hiddenDst.delete();
 });
 
-//「expansionBtn」が押された場合の処理
+//「expansionBtn」が押された場合の処理（膨張処理）
 expansionBtn.addEventListener('click', e => {
     const src = cv.imread(srcImg);
     const dst = expansion(src);
@@ -139,14 +153,19 @@ expansionBtn.addEventListener('click', e => {
     hiddenDst.delete();
 });
 
-//ダウンロード時に作用
+/*
+Blob(Binary Large Object):バイナリを扱うクラス
+base64：バイナリを文字列に変換する際に使われる方式
+*/
+
+//ダウンロード時に作用（Base64データをデコード）
 function dataUriToBlob(dataUri) {
-    const b64 = atob(dataUri.split(',')[1]);
-    const u8 = Uint8Array.from(b64.split(''), e => e.charCodeAt());
-    return new Blob([u8], { type: 'image/png' });
+    const base64 = atob(dataUri.split(',')[1]);                             //base64のデータを取得
+    const utf8 = Uint8Array.from(base64.split(''), e => e.charCodeAt());    //base64をutf8に変換
+    return new Blob([utf8], { type: 'image/png' });                         //Blobを作成
 }
 
-//[downloadBtn]が押された場合の処理
+//[downloadBtn]が押された場合の処理（ダウンロード処理）
 downloadBtn.addEventListener('click', e => {
     const data = hiddenCanvas.toDataURL();
     const url = URL.createObjectURL(dataUriToBlob(data));
