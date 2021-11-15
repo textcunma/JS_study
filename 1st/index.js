@@ -206,16 +206,16 @@ Blob(Binary Large Object):バイナリを扱うクラス
 base64：バイナリを文字列に変換する際に使われる方式
 */
 
-//ダウンロード時に作用（Base64データをデコード）
+//ダウンロード時に作用（Data URIからBlobを作成する）
 function dataUriToBlob(dataUri) {
-    const base64 = atob(dataUri.split(',')[1]);                             //base64のデータを取得
-    const utf8 = Uint8Array.from(base64.split(''), e => e.charCodeAt());    //base64をutf8に変換
-    return new Blob([utf8], { type: 'image/png' });                         //Blobを作成
+    const base64 = atob(dataUri.split(',')[1]);                             //DataURIをデコード
+    const utf8 = Uint8Array.from(base64.split(''), e => e.charCodeAt());    //デコードしたものをバイト列に
+    return new Blob([utf8], { type: 'image/png' });                         //バイト列からBlobを作成
 }
 
 //[downloadBtn]が押された場合の処理（ダウンロード処理）
 downloadBtn.addEventListener('click', e => {
-    const data = hiddenCanvas.toDataURL();
-    const url = URL.createObjectURL(dataUriToBlob(data));
+    const data = hiddenCanvas.toDataURL();  //キャンバスをData URIに変換
+    const url = URL.createObjectURL(dataUriToBlob(data));   //BlobをData URI(Data URL)にへ変換
     downloadBtn.href = url;
 });
