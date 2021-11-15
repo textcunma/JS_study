@@ -16,6 +16,8 @@ const edgeBtn = document.getElementById('edge-btn');                    //エッ
 const downloadBtn = document.getElementById('download-btn');            //ダウンロードボタン
 const dragAndDropArea = document.getElementById('drag-and-drop-area');  //ドラッグ＆ドロップエリア
 const pushBtn = document.querySelectorAll('#drag-and-drop-area');       //ドラッグ＆ドロップエリア
+const list_element = document.getElementById("comment");
+let flg=false;
 
 // ファイル選択ボタン
 //ドラッグ＆ドロップエリアでマウスクリックが行われた場合ファイル選択処理を行う
@@ -62,9 +64,17 @@ dragAndDropArea.addEventListener('drop', (e) => {
         return;
     }
 
+    list_element.remove();//「ここをクリック or　ドラッグ&ドロップ」の文字を消去
     srcImg.src = URL.createObjectURL(files[0]);     //ファイル情報から画像を読み込む(src属性に代入)
     hiddenImg.src = URL.createObjectURL(files[0]);  //ファイル情報から画像を読み込む(src属性に代入)
 });
+
+//[fileInput]が押された場合の処理（画像入力の処理）
+fileInput.addEventListener('change', e => {
+    list_element.remove();      //「ここをクリック or　ドラッグ&ドロップ」の文字を消去
+    srcImg.src = URL.createObjectURL(e.target.files[0]);
+    hiddenImg.src = URL.createObjectURL(e.target.files[0]);
+}, false);
 
 
 // 画像をグレースケールに変換する
@@ -114,91 +124,110 @@ function threshold(img) {
 //画像にエッジ処理をかける
 function edge(img) {
     let imgedge = new cv.Mat()
-    //let gray = new cv.Mat()
     cv.cvtColor(img, img, cv.COLOR_RGB2GRAY, 0);
     cv.Canny(img, imgedge, 50, 100, 3, false );
     return imgedge;
 }
 
-//[fileInput]が押された場合の処理（画像入力の処理）
-fileInput.addEventListener('change', e => {
-    srcImg.src = URL.createObjectURL(e.target.files[0]);
-    hiddenImg.src = URL.createObjectURL(e.target.files[0]);
-}, false);
-
 //「grayScaleBtn」が押された場合の処理（グレースケール化の処理）
 grayScaleBtn.addEventListener('click', e => {
-    let src = cv.imread(srcImg);
-    const dst = convertImageToGray(src);
-    cv.imshow('output-canvas', dst);
-    src.delete();
-    dst.delete();
-
-    let hiddenSrc = cv.imread(hiddenImg);
-    const hiddenDst = convertImageToGray(hiddenSrc);
-    cv.imshow('hidden-canvas', hiddenDst);
-    hiddenSrc.delete();
-    hiddenDst.delete();
+    if (srcImg.src==""){
+        alert("画像が入力されていません");
+    }else{
+        flg=true;
+        let src = cv.imread(srcImg);
+        const dst = convertImageToGray(src);
+        cv.imshow('output-canvas', dst);
+        src.delete();
+        dst.delete();
+    
+        let hiddenSrc = cv.imread(hiddenImg);
+        const hiddenDst = convertImageToGray(hiddenSrc);
+        cv.imshow('hidden-canvas', hiddenDst);
+        hiddenSrc.delete();
+        hiddenDst.delete();
+    }
 });
 
 //「lineDrawBtn」が押された場合の処理（線画化の処理）
 lineDrawBtn.addEventListener('click', e => {
-    const src = cv.imread(srcImg);
-    const dst = convertImageToLineDrawing(src);
-    cv.imshow('output-canvas', dst);
-    src.delete();
-    dst.delete();
-
-    const hiddenSrc = cv.imread(hiddenImg);
-    const hiddenDst = convertImageToLineDrawing(hiddenSrc);
-    cv.imshow('hidden-canvas', hiddenDst);
-    hiddenSrc.delete();
-    hiddenDst.delete();
+    if (srcImg.src==""){
+        alert("画像が入力されていません");
+    }else{
+        flg=true;
+        const src = cv.imread(srcImg);
+        const dst = convertImageToLineDrawing(src);
+        cv.imshow('output-canvas', dst);
+        src.delete();
+        dst.delete();
+    
+        const hiddenSrc = cv.imread(hiddenImg);
+        const hiddenDst = convertImageToLineDrawing(hiddenSrc);
+        cv.imshow('hidden-canvas', hiddenDst);
+        hiddenSrc.delete();
+        hiddenDst.delete();
+    }
 });
 
 //「expansionBtn」が押された場合の処理（膨張処理）
 expansionBtn.addEventListener('click', e => {
-    const src = cv.imread(srcImg);
-    const dst = expansion(src);
-    cv.imshow('output-canvas', dst);
-    src.delete();
-    dst.delete();
-
-    const hiddenSrc = cv.imread(hiddenImg);
-    const hiddenDst = expansion(hiddenSrc);
-    cv.imshow('hidden-canvas', hiddenDst);
-    hiddenSrc.delete();
-    hiddenDst.delete();
+    if (srcImg.src==""){
+        alert("画像が入力されていません");
+    }else{
+        flg=true;
+        const src = cv.imread(srcImg);
+        const dst = expansion(src);
+        cv.imshow('output-canvas', dst);
+        src.delete();
+        dst.delete();
+    
+        const hiddenSrc = cv.imread(hiddenImg);
+        const hiddenDst = expansion(hiddenSrc);
+        cv.imshow('hidden-canvas', hiddenDst);
+        hiddenSrc.delete();
+        hiddenDst.delete();
+    }
 });
 
 //「thresholdBtn」が押された場合の処理（2値化処理）
 thresholdBtn.addEventListener('click', e => {
-    const src = cv.imread(srcImg);
-    const dst = threshold(src);
-    cv.imshow('output-canvas', dst);
-    src.delete();
-    dst.delete();
-
-    const hiddenSrc = cv.imread(hiddenImg);
-    const hiddenDst = threshold(hiddenSrc);
-    cv.imshow('hidden-canvas', hiddenDst);
-    hiddenSrc.delete();
-    hiddenDst.delete();
+    if (srcImg.src==""){
+        alert("画像が入力されていません");
+    }else{
+        flg=true;
+        const src = cv.imread(srcImg);
+        const dst = threshold(src);
+        cv.imshow('output-canvas', dst);
+        src.delete();
+        dst.delete();
+    
+        const hiddenSrc = cv.imread(hiddenImg);
+        const hiddenDst = threshold(hiddenSrc);
+        cv.imshow('hidden-canvas', hiddenDst);
+        hiddenSrc.delete();
+        hiddenDst.delete();
+    }
 });
 
 //「edgeBtn」が押された場合の処理（エッジ処理）
 edgeBtn.addEventListener('click', e => {
-    const src = cv.imread(srcImg);
-    const dst = edge(src);
-    cv.imshow('output-canvas', dst);
-    src.delete();
-    dst.delete();
-
-    const hiddenSrc = cv.imread(hiddenImg);
-    const hiddenDst = edge(hiddenSrc);
-    cv.imshow('hidden-canvas', hiddenDst);
-    hiddenSrc.delete();
-    hiddenDst.delete();
+    if (srcImg.src==""){
+        alert("画像が入力されていません");
+    }else{
+        flg=true;
+        const src = cv.imread(srcImg);
+        const dst = edge(src);
+        cv.imshow('output-canvas', dst);
+        src.delete();
+        dst.delete();
+    
+        const hiddenSrc = cv.imread(hiddenImg);
+        const hiddenDst = edge(hiddenSrc);
+        cv.imshow('hidden-canvas', hiddenDst);
+        hiddenSrc.delete();
+        hiddenDst.delete();
+        input.disabled = true;
+    }
 });
 
 /*
@@ -215,7 +244,13 @@ function dataUriToBlob(dataUri) {
 
 //[downloadBtn]が押された場合の処理（ダウンロード処理）
 downloadBtn.addEventListener('click', e => {
-    const data = hiddenCanvas.toDataURL();  //キャンバスをData URIに変換
-    const url = URL.createObjectURL(dataUriToBlob(data));   //BlobをData URI(Data URL)にへ変換
-    downloadBtn.href = url;
+    if (srcImg.src==""){
+        alert("画像が入力されていません");
+    }else if(!flg){
+        alert("画像処理をしていません");
+    }else{
+        const data = hiddenCanvas.toDataURL();  //キャンバスをData URIに変換
+        const url = URL.createObjectURL(dataUriToBlob(data));   //BlobをData URI(Data URL)にへ変換
+        downloadBtn.href = url;
+    }
 });

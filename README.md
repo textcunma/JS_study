@@ -26,14 +26,7 @@ opencv.jsを用いて入力画像に対して画像処理を加える簡単な�
 
 勉強会資料：https://note.com/text_2021/n/n398e222aaa9d
 
-<参考サイト>
-<br>
-[Image Convert With OpenCV.js](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)
-<br>
-[HTML5/JavaScript でファイルのドラッグ＆ドロップ、画像ファイルのプレビュー](https://r17n.page/2020/10/24/html-js-drag-and-drop-file/)
-<br>
-[CSSのみのボタンデザイン](https://pulpxstyle.com/css-button/)
-<br>
+[参考資料](1st/References.md)
 
 ---
 **第2回(予定)：Chart.jsを用いたグラフアニメ表現**

@@ -1,3 +1,4 @@
+/* contentクラスに関するデザイン */
 .content {
   display: flex;
   flex-direction: row;
@@ -10,72 +11,129 @@
   margin:auto;
 }
 
-.hidden {
-  display: none;
-}
-
+/* headerクラスに関するデザイン */
 .header {
   width: 50%;
   height: 30px;
   background: white;
-
 }
 
-.image {
+/* id=commentに関するデザイン */
+#comment {
+  color: white;
+  line-height:400px;
+  margin: auto;
+}
+
+/* input_displayクラスに関するデザイン */
+.input_display {
   width: 50%;
   height: 400px;
   background: linear-gradient(190deg, #E4A972, #9941D8);
 }
 
-
-.input_image {
-  width: 50%;
-  height: 400px;
-  background: linear-gradient(190deg, #E4A972, #9941D8);
-}
-
-.input_image.active {
+/* input_displayにドラッグ&ドロップした場合のデザイン */
+.input_display.active {
   width: 50%;
   height: 400px;
   background: linear-gradient(100deg, #9941D8, #E4A972);
 }
 
-.button {
+/* output_displayクラスに関するデザイン */
+.output_display {
   width: 50%;
-  height: auto;
-  background: black;
+  height: 400px;
+  background: linear-gradient(190deg, #E4A972, #9941D8);
 }
 
+/* titleクラスに関するデザイン*/
 .title {
-    font-size: 25px;
-    text-align:center;
-    margin:15px;
+  font-size: 25px;
+  text-align:center;
+  margin:15px;
 }
 
-.button a {
+/* buttonクラスに関するデザイン*/
+.button {
+  border: none;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin:auto;
-  padding: 1em 2em;
-  width:auto;
-  color: #333;
-  font-size: small;
-  font-weight: 700;
-  background-color: #cccccc;
+  justify-content: center;
+  padding: 1em 2em 1em 1em;
+  width: 400px;
+  height:auto;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  background: linear-gradient(to right, #58b9df, #52ddae);
 }
 
-.button a::after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-top: 3px solid #333333;
-  border-right: 3px solid #333333;
+/* buttonクラスの後に追加されるデザイン*/
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.5em;
+  margin: auto;
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
   transform: rotate(45deg);
+  transition: right 0.5s;
 }
 
-.button a:hover {
+/* button領域にマウスが触れた場合の矢印のデザイン*/
+.button:hover:after{
+  right: 1em;
+}
+
+/* button領域にマウスが触れた場合のデザイン */
+.button:hover{
+  background: linear-gradient(to right, #54b1d6, #48c59b);
+}
+
+/* button2クラスに関するデザイン*/
+.button2 {
   text-decoration: none;
-  background-color: #bbbbbb;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height:208px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  background: linear-gradient(to right, #5bbee5, #52ddae);
+}
+
+/* button2クラスの後に追加されるデザイン*/
+.button2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.5em;
+  margin: auto;
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  transform: rotate(45deg);
+  transition: right 0.5s;
+}
+
+/* button2領域にマウスが触れた場合の矢印のデザイン*/
+.button2:hover:after{
+  right: 1em;
+}
+
+/* button2領域にマウスが触れた場合のデザイン */
+.button2:hover{
+  background: linear-gradient(to right, #54b1d6, #48c59b);
 }
