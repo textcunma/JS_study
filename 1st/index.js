@@ -11,6 +11,8 @@ const hiddenCanvas = document.getElementById('hidden-canvas');          //隠し
 const grayScaleBtn = document.getElementById('gray-scale-btn');         //グレースケール化ボタン
 const lineDrawBtn = document.getElementById('linedraw-btn');            //線画化ボタン
 const expansionBtn = document.getElementById('expansion-btn');          //膨張処理ボタン
+const thresholdBtn = document.getElementById('threshold-btn');          //2値化ボタン
+const edgeBtn = document.getElementById('edge-btn');                    //エッジボタン
 const downloadBtn = document.getElementById('download-btn');            //ダウンロードボタン
 const dragAndDropArea = document.getElementById('drag-and-drop-area');  //ドラッグ＆ドロップエリア
 const pushBtn = document.querySelectorAll('#drag-and-drop-area');       //ドラッグ＆ドロップエリア
@@ -102,6 +104,22 @@ function expansion(img) {
     return imgDilated;
 }
 
+//画像を２値価処理する
+function threshold(img) {
+    let imgthresh = new cv.Mat();
+    cv.threshold(img,imgthresh, 126, 255, cv.THRESH_BINARY);
+    return imgthresh;
+}
+
+//画像にエッジ処理をかける
+function edge(img) {
+    let imgedge = new cv.Mat()
+    //let gray = new cv.Mat()
+    cv.cvtColor(img, img, cv.COLOR_RGB2GRAY, 0);
+    cv.Canny(img, imgedge, 50, 100, 3, false );
+    return imgedge;
+}
+
 //[fileInput]が押された場合の処理（画像入力の処理）
 fileInput.addEventListener('change', e => {
     srcImg.src = URL.createObjectURL(e.target.files[0]);
@@ -148,6 +166,36 @@ expansionBtn.addEventListener('click', e => {
 
     const hiddenSrc = cv.imread(hiddenImg);
     const hiddenDst = expansion(hiddenSrc);
+    cv.imshow('hidden-canvas', hiddenDst);
+    hiddenSrc.delete();
+    hiddenDst.delete();
+});
+
+//「thresholdBtn」が押された場合の処理（2値化処理）
+thresholdBtn.addEventListener('click', e => {
+    const src = cv.imread(srcImg);
+    const dst = threshold(src);
+    cv.imshow('output-canvas', dst);
+    src.delete();
+    dst.delete();
+
+    const hiddenSrc = cv.imread(hiddenImg);
+    const hiddenDst = threshold(hiddenSrc);
+    cv.imshow('hidden-canvas', hiddenDst);
+    hiddenSrc.delete();
+    hiddenDst.delete();
+});
+
+//「edgeBtn」が押された場合の処理（エッジ処理）
+edgeBtn.addEventListener('click', e => {
+    const src = cv.imread(srcImg);
+    const dst = edge(src);
+    cv.imshow('output-canvas', dst);
+    src.delete();
+    dst.delete();
+
+    const hiddenSrc = cv.imread(hiddenImg);
+    const hiddenDst = edge(hiddenSrc);
     cv.imshow('hidden-canvas', hiddenDst);
     hiddenSrc.delete();
     hiddenDst.delete();
