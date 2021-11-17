@@ -17,13 +17,15 @@ Gitに関する主要な用語のおさらい，GitHubの利用方法の簡単�
 <br>
 [GitHub 始め方](https://note.com/text_2021/n/ne1cadbf17571)
 
-Gitコマンドに関しては，ProgateのGitコースをオススメしました。
+Gitコマンドに関しては，ProgateのGitコース他をオススメしました。
 <br>
 [Progate Git](https://prog-8.com/courses/git)
 <br>
-洗練されたコミットメッセージを書く方法は以下のサイトを参考
+[洗練されたコミットメッセージを書く方法](https://www.conventionalcommits.org/ja/v1.0.0/)
 <br>
-[Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)
+[Git図解](https://kray.jp/blog/git-why-explanation/)
+<br>
+[Git図解2](https://kray.jp/blog/git-pull-rebase/)
 
 ---
 **第1回：opencv.jsを用いた簡単な画像処理システム**
