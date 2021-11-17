@@ -26,7 +26,7 @@
 }
 
 /* input_displayクラスに関するデザイン */
-.input_display {
+.input_display,.output_display {
   width: 50%;
   height: 400px;
   background: linear-gradient(190deg, #E4A972, #9941D8);
@@ -37,13 +37,6 @@
   width: 50%;
   height: 400px;
   background: linear-gradient(100deg, #9941D8, #E4A972);
-}
-
-/* output_displayクラスに関するデザイン */
-.output_display {
-  width: 50%;
-  height: 400px;
-  background: linear-gradient(190deg, #E4A972, #9941D8);
 }
 
 /* titleクラスに関するデザイン*/
@@ -70,7 +63,7 @@
 }
 
 /* buttonクラスの後に追加されるデザイン*/
-.button:after {
+.button:after,.button2:after {
   content: "";
   position: absolute;
   top: 0;
@@ -86,12 +79,12 @@
 }
 
 /* button領域にマウスが触れた場合の矢印のデザイン*/
-.button:hover:after{
+.button:hover:after,.button2:hover:after{
   right: 1em;
 }
 
 /* button領域にマウスが触れた場合のデザイン */
-.button:hover{
+.button:hover,.button2:hover {
   background: linear-gradient(to right, #54b1d6, #48c59b);
 }
 
@@ -110,30 +103,4 @@
   text-align: center;
   line-height: 1;
   background: linear-gradient(to right, #5bbee5, #52ddae);
-}
-
-/* button2クラスの後に追加されるデザイン*/
-.button2:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 1.5em;
-  margin: auto;
-  width: 0.5em;
-  height: 0.5em;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
-  transform: rotate(45deg);
-  transition: right 0.5s;
-}
-
-/* button2領域にマウスが触れた場合の矢印のデザイン*/
-.button2:hover:after{
-  right: 1em;
-}
-
-/* button2領域にマウスが触れた場合のデザイン */
-.button2:hover{
-  background: linear-gradient(to right, #54b1d6, #48c59b);
 }
