@@ -1,13 +1,6 @@
 # 勉強会用資料 公開リポジトリ
 HTML，CSS，JavaScriptを学ぶ勉強会のために作成されたプログラム
 
-
-### 事前準備
-1. opencv.jsサイトにアクセス (https://docs.opencv.org/3.4.0/opencv.js)
-2. 右クリック->名前を付けて保存
-3. ダウンロードしたopencv.jsを「JS_studyフォルダ直下」に設置
-<br>
-
 ---
 **第0回：Gitの使い方**
 <br>
