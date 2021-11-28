@@ -23,6 +23,9 @@ Gitコマンドに関しては，ProgateのGitコース他をオススメしま�
 ---
 **第1回：opencv.jsを用いた簡単な画像処理システム**
 <br>
+
+**branch -> main**
+
 opencv.jsを用いて入力画像に対して画像処理を加える簡単なシステム作成
 <div align="center">
 <img src="assets/1.png" width="70%">
@@ -41,9 +44,18 @@ https://note.com/text_2021/n/n398e222aaa9d
 [参考資料](1st/References.md)
 
 ---
-**第2回(予定)：アニメ表現**
+**第2回：jQuery等を用いたアニメーション**
 <br>
+
+**branch -> main_2nd**
+
 - メインページの作成
-- メインページはjQueryを用いたアニメ表現を導入
+- Chart.js
+- jQuery
 - HSV抽出ボタン追加
-- Chart.jsを用いて,HSV値を棒グラフで表現
+
+[参考資料](2nd/References.md)
+
+---
+**第3回：非同期画面遷移(予定)**
+<br>
