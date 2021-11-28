@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>勉強会用</title>
+        <link rel="stylesheet" href="stylesheet.css">   <!-- CSSファイル読み込み -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>    <!-- jQuery読み込み -->
+    </head>
+
+    <body>
+        <header>
+            <div class="header-logo">勉強会</div>
+            <div class="header-list">
+                <ul>
+                <li class="head_num"><a id='lesson_1'>第1回</a></li>
+                <li class="head_num"><a id='lesson_2'>第2回</a></li>
+                <li class="head_num"><a id='lesson_3'>第3回</a></li>
+                <li class="head_num"><a id='lesson_4'>第4回</a></li>
+                <li class="head_num"><a id='lesson_5'>第5回</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="copy-container">
+                <h1><span>JS</span>_STUDY</h1>
+            </div>
+        
+            <div class="contents">
+                <h3 class="bar">HTML、CSS、JavaScriptに関して勉強する会</h3>
+
+
+                <div class="contents-item">
+                    <a href="./2nd/2nd.html"><img src="assets/CV.svg" id="cvimg"></a>
+                    <p>画像処理編</p>
+                </div>
+
+                <div class="contents-item">
+                    <img src="assets/Web.svg" id="webimg">
+                    <p>ウェブスクレイピング編</p>
+                </div>    
+            </div>
+        </div>
+
+        <div class="modal">
+            <button type="button">×</button>
+            <div id="intro">
+                <!-- わざと空にしている　：　内容が適宜入る -->
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://github.com/textcunma/JS_study"><img src="./assets/GitHub_Logo_White.png"></a>
+        </footer>
+        
+        <script src="index.js" type="text/javascript"></script>    <!-- JSファイル読み込み -->
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="2nd.css"> 
+        <title>第2回</title>
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="header">入力画像</div>
+            <div class="header">出力画像</div>
+
+            <div class="input_display" id="drag-and-drop-area">
+                <p id="comment">ここをクリック or ドラッグ&ドロップ</p>
+                <input type="file" hidden accept="image/*" id="file-select-input">
+                <img id="src-image" style="width: 400px;"/>
+                <img id="hidden-image" style="display: none;" />
+            </div>
+
+            <div class="output_display">
+                <canvas id="output-canvas"></canvas>
+                <canvas id="hidden-canvas" style="display: none;"></canvas>
+            </div>
+
+            <div class="cv_button">
+                <button id="gray-scale-btn" type="button">グレースケール化</button>
+                <button id="linedraw-btn" type="button">線画化</button>
+                <button id="expansion-btn" type="button">膨張処理</button>
+                <button id="threshold-btn" type="button">2値化処理</button>
+                <button id="edge-btn" type="button">エッジ処理</button>
+                <button id="hsv-btn" type="button">HSV抽出</button> <!-- 新規ボタン -->
+            </div>
+
+            <div>
+                <a id="download-btn" download="converted.png">ダウンロード</a>
+            </div>
+            
+        </div>
+
+        <!-- モーダルに関する内容 -->
+        <div class="modal" id="modal">
+            <button type="button" id="deleteBtn">×</button>
+            <a id="saveCanvasBtn" download="canvas.png">save</a>
+            <canvas id="mychart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   <!--Chart.js読み込み-->
+        <script src="https://docs.opencv.org/3.4.1/opencv.js"></script> <!--OpenCV読み込み-->
+        <script src="2nd.js" type="text/javascript"></script>
+
+    </body>
+</html>
