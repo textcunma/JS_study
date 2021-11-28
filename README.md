@@ -2,7 +2,9 @@
 HTML，CSS，JavaScriptを学ぶ勉強会のために作成されたプログラム
 
 ---
-**第0回：Gitの使い方**
+<details>
+<summary>第0回：Gitの使い方</summary>
+
 <br>
 Gitに関する主要な用語のおさらい，GitHubの利用方法の簡単な振り返り
 <br>
@@ -19,9 +21,11 @@ Gitコマンドに関しては，ProgateのGitコース他をオススメしま�
 [Git図解](https://kray.jp/blog/git-why-explanation/)
 <br>
 [Git図解2](https://kray.jp/blog/git-pull-rebase/)
+</details>
 
 ---
-**第1回：opencv.jsを用いた簡単な画像処理システム**
+<details>
+<summary>第1回：opencv.jsを用いた簡単な画像処理システム</summary>
 <br>
 
 **branch -> main**
@@ -37,11 +41,11 @@ opencv.jsを用いて入力画像に対して画像処理を加える簡単な�
 2. 複数の画像処理をボタンで操作
 3. 単一ファイルのダウンロード
 <br>
-
 勉強会資料<br>
 https://note.com/text_2021/n/n398e222aaa9d
 
 [参考資料](1st/References.md)
+</details>
 
 ---
 **第2回：jQuery等を用いたアニメーション**
