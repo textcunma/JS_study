@@ -6,11 +6,6 @@ body {
     list-style: none;
 }
 
-
-.head_num{
-    list-style: none;
-}
-
 a {
     text-decoration: none;
     color: #fff;
@@ -33,7 +28,8 @@ header {
 }
 
 .header-list li {
-    float: left;
+    /* 左寄せ */
+    float: left;    
     font-size:20px;
     padding: 33px 20px;
     cursor: pointer;

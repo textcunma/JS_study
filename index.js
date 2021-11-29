@@ -1,5 +1,6 @@
 //HTMLが全て読み込まれてからjQueryを実行
 $(function() {
+    //モーダル開ける
     $('.head_num').click(function(){
         $('.modal').fadeIn();
     });
@@ -42,23 +43,9 @@ $(function() {
 
     $('#lesson_4').click(function(){
         $('#intro').html('<h2>第4回目(予定)</h2>\
-                            <h2>ウェブスクレイピング</h2>\
-                            <li>非同期処理</li>\
-                            <li>ウェブスクレイピング</li>\
+                            <h2>GitHub Pagesを使った静的ページの作成</h2>\
+                            <li>GitHub Pages</li>\
                             <br>\
                             <a href="" id="modal_lan">第4回目へ</a>');
-    });
-
-    $('#lesson_5').click(function(){
-        $('#intro').html('<h2>第5回目(予定)</h2>\
-                            <h2>GitHub Pagesを用いた静的ページ作成</h2>\
-                            <li>GitHub Pages</li>\
-                            <li>GitHub Actionを用いたbot作成</li>\
-                            <br>\
-                            <a href="" id="modal_lan">第5回目へ</a>');
-    });
-
-    $('#cvimg').click(function(){
-        window.location.href = './1st/index.html';
     });
 });

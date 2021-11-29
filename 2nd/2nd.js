@@ -43,6 +43,7 @@ saveCanvasBtn.addEventListener('click', e => {
 function drawChart(h, s, v) {
     const ctx = document.getElementById('mychart');
     let delayed = false;
+
     myChart = new Chart(ctx, {
         type: 'bar',    //グラフの種類（棒グラフ）
         data: {
@@ -168,7 +169,7 @@ hsvBtn.addEventListener('click', e => {
         if (myChart) {      //既にグラフが描画されている場合
             myChart.destroy();  //グラフを削除
         }
-        drawChart(h, s, v);
+        drawChart(h, s, v);     //グラフを描画
 
     }
 });
