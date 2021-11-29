@@ -58,6 +58,10 @@ https://note.com/text_2021/n/n398e222aaa9d
 - jQuery
 - HSV抽出ボタン追加
 
+<br>
+勉強会資料<br>
+https://note.com/text_2021/n/n58b58d7dca4a
+
 [参考資料](2nd/References.md)
 
 ---
