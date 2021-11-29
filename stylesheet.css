@@ -16,6 +16,10 @@ a {
 }
 
 header {
+    position: absolute;
+    top:0;
+    width: 100%;
+    min-width:980px;
     background-color: #2a5746;
     color: #fff;
     height: 90px;
@@ -31,11 +35,12 @@ header {
     /* 左寄せ */
     float: left;    
     font-size:20px;
-    padding: 33px 20px;
+    padding: 15px 20px;
     cursor: pointer;
 }
 
 .copy-container h1 {
+    margin-top:130px;
     font-size: 50px;
     padding-left: 40px;
 }
@@ -108,13 +113,26 @@ header {
 }
 
 footer {
+    /* フッターを固定 */
+    position: absolute; 
+    bottom: 0;
+
+    /* フッターの他の情報を指定 */
+    width: 100%;
+    min-width:980px;
+
     background-color: #615433;
     height: 60px;
-    
 }
+
 footer img{
+    float:right;
+    padding-right:30px;
+    
+    margin-top:10px;
     width:100px;
-    position: relative;
-    left: 90%;
-    top: 10%;
+}
+
+html {
+    overflow-x:hidden;      /* 横スクロールバーを消す */
 }
