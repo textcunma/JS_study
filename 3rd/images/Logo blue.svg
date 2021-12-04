@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg9"
+   xml:space="preserve"
+   width="164.02592"
+   height="166.37126"
+   viewBox="0 0 164.02592 166.37126"
+   sodipodi:docname="Logo blue.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs13"><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath25"><path
+         d="M 0,551.986 H 530.973 V 0 H 0 Z"
+         id="path23" /></clipPath><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1967"><rect
+         style="fill:#0000ff;fill-opacity:0.586207;fill-rule:evenodd;stroke-width:0.702382"
+         id="rect1969"
+         width="124.77845"
+         height="124.77875"
+         x="287.97736"
+         y="-496.11285"
+         transform="scale(1,-1)" /></clipPath></defs><sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.1277714"
+     inkscape:cx="114.204"
+     inkscape:cy="3.5248147"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g15"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" /><g
+     id="g15"
+     inkscape:groupmode="layer"
+     inkscape:label="GitHub-Mark"
+     transform="matrix(1.3333333,0,0,-1.3333333,-210.07894,689.92371)"><g
+       id="Logo_1_"
+       transform="matrix(0.48741789,0,0,-0.48741789,159.20931,501.47448)">
+	<path
+   id="white_background"
+   class="st0"
+   d="m 221.95,51.29 c 0.15,2.17 0.15,4.34 0.15,6.53 0,66.73 -50.8,143.69 -143.69,143.69 v -0.04 C 50.97,201.51 24.1,193.65 1,178.83 c 3.99,0.48 8,0.72 12.02,0.73 22.74,0.02 44.83,-7.61 62.72,-21.66 -21.61,-0.41 -40.56,-14.5 -47.18,-35.07 7.57,1.46 15.37,1.16 22.8,-0.87 C 27.8,117.2 10.85,96.5 10.85,72.46 c 0,-0.22 0,-0.43 0,-0.64 7.02,3.91 14.88,6.08 22.92,6.32 C 11.58,63.31 4.74,33.79 18.14,10.71 c 25.64,31.55 63.47,50.73 104.08,52.76 -4.07,-17.54 1.49,-35.92 14.61,-48.25 20.34,-19.12 52.33,-18.14 71.45,2.19 11.31,-2.23 22.15,-6.38 32.07,-12.26 -3.77,11.69 -11.66,21.62 -22.2,27.93 10.01,-1.18 19.79,-3.86 29,-7.95 -6.78,10.16 -15.32,19.01 -25.2,26.16 z" />
+</g></g><style
+     type="text/css"
+     id="style1001">
+	.st0{fill:#1D9BF0;}
+</style></svg>

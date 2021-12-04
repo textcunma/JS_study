@@ -38,7 +38,7 @@ $(function() {
                             <li>barba.js(v2)</li>\
                             <li>SNS連動ボタン追加</li>\
                             <br>\
-                            <a href="" id="modal_lan">第3回目へ</a>');
+                            <a href="./3rd/3rd.html" id="modal_lan">第3回目へ</a>');
     });
 
     $('#lesson_4').click(function(){

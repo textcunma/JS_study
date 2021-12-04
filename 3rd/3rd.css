@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/*Webサイト全体の設定*/
+body {
+    margin: 0;
+    padding: 0;
+ }
+
+ /*画像のコピー禁止設定*/
+img {
+    pointer-events: none;
+}
+
+/*ヘッダーの設定*/
+header{
+    position:absolute;
+    top:0;
+    width:100%;
+    background-color: #ffffff;
+    height:250px;
+}
+
+/* ヘッダーのタイトルの設定 */
+.header-logo{
+    position:absolute;
+    font-size:50px;
+    left:100px;
+    top:60px;
+    font-family:system-ui;
+    font-weight:50;
+    text-shadow: 4px 4px #ebeff7;
+}
+
+/* ヘッダーのメニューの設定 */
+.heads{
+    float:right;
+    list-style: none;
+    cursor:pointer;
+    margin-top:150px;
+    font-family:cursive;
+    color: #000;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* ヘッダーのメニュー表示設定 */
+.heads li{
+    padding-right: 40px;
+    display: inline-block;
+}
+
+/* ヘッダー、フッター以外の要素の設定 */
+.main{
+    margin-top:250px;
+    width:100%;
+    height:auto;
+    background-color: #ffffff;
+}
+
+/* 表紙画像の設定 */
+#front{
+    width:100%;
+    vertical-align: bottom;
+}
+
+/* 章タイトルの設定 */
+.main h2{
+    margin-top:120px;
+    display:flex;
+    justify-content: center;
+}
+
+/* About章の設定 */
+.About-content{
+    display:flex;
+    width:100%;
+    flex-wrap:wrap;
+    justify-content: center;
+    font-family:system-ui;
+    font-size:23px;
+}
+
+/* About章の表示調整の設定 */
+.About-content div{
+    margin: 20px;
+}
+
+.more{
+    text-align:center;
+}
+
+.moreBtn{
+    margin-top:20px;
+    width:200px;
+    height:50px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-size:20px;
+    font-family:system-ui;
+    font-weight:bold;
+    color: #000;
+}
+
+.moreBtn:hover{
+    background-color: #000;
+    color: #ffffff;
+}
+
+/* アイコン表示の設定 */
+#icon{
+    background-color: #000000;
+}
+
+/* Skill章の表示キャンバスの設定 */
+.canvas-board{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    /* 折り返し設定 ON */
+    justify-content: space-evenly;
+}
+
+/* Works章の設定 */
+#works_id{
+    display:flex;
+    justify-content:center; 
+}
+
+/* 作品１ */
+#works1{
+    background-color: #127050;
+    margin:10px;
+}
+
+/* 作品２ */
+#works2{
+    background-color: #9298f1;
+    margin:10px;
+}
+
+/* 作品３ */
+#works3{
+    background-color: #f3a9dd;
+    margin:10px;
+}
+
+/* モーダルに関するデザイン */
+.modal {
+    background: rgba(140, 216, 178, 0.5);  /* 半透明の背景を設置 */
+    position: fixed;              /* 表示位置に固定 */
+    width: 50%;                  /* 横幅を幅いっぱい */
+    height: auto;                 /* 高さを縦幅いっぱい */
+    top: 20%;                       /* 上から0pxの位置 */
+    left: 25%;                      /* 左から0pxの位置 */
+    display: none;                /* 最初は非表示にする */
+    box-sizing: border-box;       /* 余白や幅の計算を簡単にする */
+    margin: 0 auto;               /* 左右中央に配置*/
+    padding: 50px;                /* 上下左右に適度な余白 */
+}
+
+/* モーダルに表示されるボタンデザイン */
+.modal button{
+    margin-right:-20px;
+    margin-top:-20px;
+    float: right;   /* 右寄せ */
+    font-family:emoji;
+}
+
+/* モーダルがアクティブの時 */
+.modal.active{
+    display: block;
+  }
+
+#works1:hover{
+    background-color: #0e533c;
+}
+
+#works2:hover{
+    background-color: #767cca;
+}
+
+#works3:hover{
+    background-color: #c787b4;
+}
+
+.icons{
+    display:flex;
+    justify-content:center;
+}
+
+.icons #twitter_icon{
+    margin-right:30px;
+}
+
+#topBtn{
+    font-size:20px;
+    float:right;
+}
+/* フッターの設定 */
+footer{
+    width:100%;
+    height:90px;
+    background-color:#9dd0f8;
+}
+
+footer p{
+    text-align:center;
+    font-size:30px;
+    color:white;
+    text-shadow:1px 5px #00000012;
+}

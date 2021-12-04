@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="ポートフォリオ,自己紹介,portfolio">
+        <meta discription="description" content="自己紹介">
+        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+        <link rel="stylesheet" href="3rd.css"> 
+        <title>SAMPLE Portfolio</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-logo">SAMPLE Portfolio</div>
+            <ul class="heads">
+                <a href="#About"><li>About</li></a>
+                <a href="#Skill"><li>Skill</li></a>
+                <a href="#Works"><li>Works</li></a>
+                <a href="#Contact"><li>Contact</li></a>
+            </ul>
+        </header>
+        <div class="main">
+            <img alt="表紙" src="images/front.png" id="front" alt="表紙画像">
+
+            <section id="About" data-barba="wrapper">
+                <h2>About</h2>
+                <div class="About-content" data-barba="container" data-barba-namespace="home">
+                    <div>
+                        <canvas id="icon" width="200" height="200"></canvas>
+                    </div>
+                    <div class="txtbox">
+                        日本でプログラミングをしております。<br>
+                        1990年よりプログラミングに興味をもち始め、<br>
+                        2000年から3年間コーディングの業務を行う。<br>
+                        そして2021年より現在の職種へ。<br>
+                        <br>
+                        プログラミングとラーメンに興味があります。<br>
+                    </div>
+                </div>
+                <div class="more">
+                    <button class="moreBtn">more</button>
+                </div>
+                
+            </section>
+
+            <section id="Skill">
+                <h2>Skill</h2>
+                <div class="canvas-board">
+                    <canvas id="mychart" width="250"></canvas>
+                    <canvas id="mychart2" width="250"></canvas>
+                    <canvas id="mychart3" width="250"></canvas>
+                    <canvas id="mychart4" width="250"></canvas>
+                    <canvas id="mychart5" width="250"></canvas>
+                </div>
+            </section>
+                
+            <section id="Works">
+                <h2>Works</h2>
+                <div id="works_id">
+                    <a><canvas id="works1" width="200" height="200"></canvas></a>
+                    <a><canvas id="works2" width="200" height="200"></canvas></a>
+                    <a><canvas id="works3" width="200" height="200"></canvas></a>
+                </div>
+            </section>
+
+            <div class="modal" id="modal">
+                <button type="button" id="deleteBtn">×</button>
+                作品説明
+            </div>
+
+            <section id="Contact">
+                <h2>Contact</h2>
+                <div class="icons">
+                    <a href="https://twitter.com/text_cunma" id="twitter_icon"><img src="./images/Logo blue.svg" alt="Twitter"></a>
+                    <a href="https://github.com/textcunma"><img src="./images/GitHub-Mark.svg" alt="GitHub"></a>
+                </div>
+            </section>
+            
+            <a href="#" id="topBtn">top</a>
+
+        </div>
+
+        <footer>
+            <p>SAMPLE Portfolio</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+        <script src="3rd.js" type="text/javascript"></script>
+        <script>
+            drawChart("C++",1,'mychart');
+            drawChart("Python",4,'mychart2');
+            drawChart("HTML/CSS",3,'mychart3');
+            drawChart("JavaScript",2,'mychart4');
+            drawChart("Java",1,'mychart5');
+        </script>
+        
+    </body>
+</html>
