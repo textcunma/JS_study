@@ -13,6 +13,10 @@
 [ScrollReveal.jsを使ってスクロールしたらふわっと表示される動きを作ってみよう](https://liginc.co.jp/500530)
 
 ### 非同期処理の基礎
+[Understanding the Event Loop, Callbacks, Promises, and Async/Await in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-the-event-loop-callbacks-promises-and-async-await-in-javascript)
+<br>
+
+
 [【JavaScript】非同期処理 まとめ](https://zenn.dev/tentel/articles/8146043d1101b5ea873d)
 <br>
 
@@ -33,4 +37,10 @@
 <br>
 
 [Barba.js v2でサイトを簡単に非同期遷移させる](https://www.willstyle.co.jp/blog/3055/)
+<br>
+[
+Barba.jsとPrefetchを導入して画面遷移を爆速にする方法！！５分で完了！サンプルあり！](https://leap-in.com/ja/increase-page-transition-speed-by-barbajs-2/)
+<br>
+
+[Analytics](https://barba.js.org/docs/userguide/analytics/)
 <br>

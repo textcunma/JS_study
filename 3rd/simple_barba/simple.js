@@ -68,6 +68,15 @@ function init(){
         window.scrollTo(0, 0);
     });
 
+    // https://leap-in.com/ja/increase-page-transition-speed-by-barbajs-2/
+    Barba.Prefetch.init();
+
+    // https://barba.js.org/docs/userguide/analytics/
+    barba.hooks.after(() => {
+        ga('set', 'page', window.location.pathname);
+        ga('send', 'pageview');
+      });
+
     barba.init({
         transitions: [{
             //現在のページを離れる時
