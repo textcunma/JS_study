@@ -28,22 +28,28 @@ $(function() {
                             <li>jQuery</li>\
                             <li>Chart.js</li>\
                             <br>\
+                            <a href="./SAMPLE_chartjs-plugin-datalabels/sample.html" id="modal_lan">グラフサンプルページ</a>\
                             <a href="./2nd/2nd.html" id="modal_lan">第2回目へ</a>');
     });
 
     $('#lesson_3').click(function(){
-        $('#intro').html('<h2>第3回目(予定)</h2>\
+        $('#intro').html('<h2>第3回目</h2>\
                             <h2>非同期画面遷移</h2>\
                             <li>非同期処理</li>\
                             <li>barba.js(v2)</li>\
                             <li>SNS連動ボタン追加</li>\
+                            <li>tailwind CSS</li>\
+                            <li>スクロールアニメ表現</li>\
                             <br>\
+                            <a href="./3rd/Asynchronous_Process/practice.html" id="modal_lan">非同期処理サンプル</a>\
+                            <a href="./3rd/simple_barba/index.html" id="modal_lan">非同期実装ページ</a>\
                             <a href="./3rd/3rd.html" id="modal_lan">第3回目へ</a>');
     });
 
     $('#lesson_4').click(function(){
         $('#intro').html('<h2>第4回目(予定)</h2>\
                             <h2>GitHub Pagesを使った静的ページの作成</h2>\
+                            <li>レスポンシブル対応</li>\
                             <li>GitHub Pages</li>\
                             <br>\
                             <a href="" id="modal_lan">第4回目へ</a>');
