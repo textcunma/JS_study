@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/*ヘッダーの設定*/
+header{
+    position:absolute;
+    top:0;
+    width:100%;
+    background-color: #ffffff;
+    height:200px;
+}
+
+/* ヘッダーのタイトルの設定 */
+.header-logo{
+    position:absolute;
+    font-size:50px;
+    left:100px;
+    top:60px;
+    font-family:system-ui;
+    font-weight:50;
+    text-shadow: 4px 4px #ebeff7;
+}
+
+/* ヘッダーのメニューの設定 */
+.heads{
+    float:right;
+    list-style: none;
+    cursor:pointer;
+    margin-top:150px;
+    font-family:cursive;
+    color: #000;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* ヘッダーのメニュー表示設定 */
+.heads li{
+    padding-right: 40px;
+    display: inline-block;
+}
+
+/* 画面ロードに登場するオブジェクト */
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 500px;
+    pointer-events: none;
+    background-color: #df954c;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* 画面表示される言葉 */
+#word{
+    text-align:center;
+    font-size: 150px;
+    font-family: system-ui;
+    font-weight: 50;
+    text-shadow: 4px 4px #ebeff7;
+}
+
+
+/* ヘッダー以外の内容 */
+#content_main{
+    margin-top:200px;
+    height:600px;
+    background-color: rgb(250, 192, 192);
+}
+
+#content_about{
+    margin-top:200px;
+    height:600px;
+    background-color: rgb(208, 208, 255);
+}
