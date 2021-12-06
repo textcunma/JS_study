@@ -77,6 +77,9 @@ function init(){
         ga('send', 'pageview');
       });
 
+
+    //   アニメーションの動きを待ってから遷移を実行したいので async / await を使って完了を待っている
+    // https://www.evoworx.co.jp/blog/barbajsv2-transition/
     barba.init({
         transitions: [{
             //現在のページを離れる時

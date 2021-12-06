@@ -48,3 +48,4 @@ Barba.jsとPrefetchを導入して画面遷移を爆速にする方法！！５�
 [barba.js v2で簡単に非同期画面遷移を取り入れてページ高速化！](https://notes.sharesl.net/articles/50/)
 <br>
 
+[Barba.js v2とGSAPでページ遷移アニメーション](https://www.evoworx.co.jp/blog/barbajsv2-transition/)
