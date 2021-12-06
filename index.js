@@ -28,7 +28,7 @@ $(function() {
                             <li>jQuery</li>\
                             <li>Chart.js</li>\
                             <br>\
-                            <a href="./SAMPLE_chartjs-plugin-datalabels/sample.html" id="modal_lan">グラフサンプルページ</a>\
+                            <a href="./2nd/SAMPLE_chartjs-plugin-datalabels/sample.html" id="modal_lan">グラフサンプルページ</a>\
                             <a href="./2nd/2nd.html" id="modal_lan">第2回目へ</a>');
     });
 
