@@ -48,7 +48,7 @@ function init(){
                 scaleX: 1, 
                 rotation: 0,
                 ease: 'Power4.inOut', 
-                transformOrigin: 'left center'      //左から右に
+                transformOrigin: 'left center'      //左から中央に
             });
     }
 
@@ -58,7 +58,7 @@ function init(){
             scaleX: 0,
             xPercent: 0, 
             rotation: 0, 
-            transformOrigin: 'right center', 
+            transformOrigin: 'right center',        //中央から右に
             ease: 'Power4.inOut'
         });
     }
@@ -69,13 +69,13 @@ function init(){
     });
 
     // https://leap-in.com/ja/increase-page-transition-speed-by-barbajs-2/
-    Barba.Prefetch.init();
+    // Barba.Prefetch.init();//エラーになるので別の書き方があるんだと思います
 
-    // https://barba.js.org/docs/userguide/analytics/
-    barba.hooks.after(() => {
-        ga('set', 'page', window.location.pathname);
-        ga('send', 'pageview');
-      });
+    // // https://barba.js.org/docs/userguide/analytics/
+    // barba.hooks.after(() => {
+    //     ga('set', 'page', window.location.pathname);
+    //     ga('send', 'pageview');
+    //   });
 
 
     //   アニメーションの動きを待ってから遷移を実行したいので async / await を使って完了を待っている
