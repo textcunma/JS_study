@@ -62,7 +62,9 @@ opencv.jsを用いて入力画像に対して画像処理を加える簡単な�
 </details>
 
 ---
-**第3回：非同期画面遷移**
+<details>
+
+<summary>第3回：非同期画面遷移</summary>
 <br>
 
 - 非同期処理の基礎
@@ -78,7 +80,10 @@ https://github.com/textcunma/skill-display
 
 [参考資料](./3rd/References.md)
 
+</details>
+
 ---
+
 **第4回：静的ページ作成**
 <br>
 
