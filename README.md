@@ -28,8 +28,6 @@ Gitコマンドに関しては，ProgateのGitコース他をオススメしま�
 <summary>第1回：opencv.jsを用いた簡単な画像処理システム</summary>
 <br>
 
-**branch -> main**
-
 opencv.jsを用いて入力画像に対して画像処理を加える簡単なシステム作成
 <div align="center">
 <img src="assets/1.png" width="70%">
@@ -52,8 +50,6 @@ opencv.jsを用いて入力画像に対して画像処理を加える簡単な�
 <summary>第2回：jQuery等を用いたアニメーション</summary>
 <br>
 
-**branch -> main_2nd**
-
 - メインページの作成
 - Chart.js
 - jQuery
@@ -68,8 +64,6 @@ opencv.jsを用いて入力画像に対して画像処理を加える簡単な�
 ---
 **第3回：非同期画面遷移**
 <br>
-
-**branch -> main_3rd**
 
 - 非同期処理の基礎
 - barba.js V2を用いた非同期画面遷移
