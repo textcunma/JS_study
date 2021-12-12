@@ -89,3 +89,5 @@ https://github.com/textcunma/skill-display
 
 - レスポンシブ対応
 - GitHub Pages 
+
+[勉強会用資料](https://note.com/text_2021/n/n388c6a576e45)
