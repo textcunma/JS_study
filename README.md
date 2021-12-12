@@ -84,10 +84,14 @@ https://github.com/textcunma/skill-display
 
 ---
 
-**第4回：静的ページ作成**
+<details>
+<summary>第4回：静的ページ作成</summary>
+
 <br>
 
 - レスポンシブ対応
 - GitHub Pages 
 
 [勉強会用資料](https://note.com/text_2021/n/n388c6a576e45)
+
+</details>
