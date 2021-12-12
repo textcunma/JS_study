@@ -41,7 +41,6 @@ $(function() {
                             <li>tailwind CSS</li>\
                             <li>スクロールアニメ表現</li>\
                             <br>\
-                            <a href="./3rd/Asynchronous_Process/practice.html" id="modal_lan">非同期処理サンプル</a>\
                             <a href="./3rd/simple_barba/index.html" id="modal_lan">非同期実装ページ</a>\
                             <a href="./3rd/3rd.html" id="modal_lan">第3回目へ</a>');
     });
