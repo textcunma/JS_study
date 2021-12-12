@@ -49,8 +49,6 @@ $(function() {
         $('#intro').html('<h2>第4回目(予定)</h2>\
                             <h2>GitHub Pagesを使った静的ページの作成</h2>\
                             <li>レスポンシブル対応</li>\
-                            <li>GitHub Pages</li>\
-                            <br>\
-                            <a href="" id="modal_lan">第4回目へ</a>');
+                            <li>GitHub Pages</li>');
     });
 });
